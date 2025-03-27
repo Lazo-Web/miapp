@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Remolque;
 use App\Models\Tractora;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -14,7 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Tractora::factory(20)->create();
+        Tractora::factory(50)->create();
+        Remolque::factory(50)->create();
         // User::factory(10)->create();
 
         // User::factory()->create([

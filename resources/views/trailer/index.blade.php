@@ -17,27 +17,24 @@
                             Marca
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Modelo
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Kilometraje
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Consumo medio
+                            Chasis
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Matriculación
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            ITV
+                            Fecha Itv
                         </th>
-                        <th scope="col-2" class="px-6 py-3 text-justify">
+                        <th scope="col" class="px-6 py-3">
+                            Fecha ATP
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-justify">
                             
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tractor as $item)
+                   @foreach($remolque as $item)
                     <tr class="bg-white border-b celda dark:border-gray-700 border-gray-200">
                         <th scope="row"
                             class="px-6 py-4 font-medium whitespace-nowrap dark:text-white uppercase">
@@ -45,22 +42,19 @@
                         </th>
                         <td
                             class="px-6 py-4 font-sans font-light  whitespace-nowrap dark:text-white uppercase text-left">
-                            {{ $item->marca }}
+                            {{ $item->marca}}
                         </td>
                         <td class="px-6 py-4 font-medium  whitespace-nowrap dark:text-white uppercase text-left">
-                            {{ $item->modelo }}
+                            {{ $item->numero_chasis}}
                         </td>
                         <td class="px-6 py-4 font-medium  whitespace-nowrap dark:text-white uppercase text-left">
-                            {{ $item->kilometraje }}
+                          {{ $item->matriculacion}}
                         </td>
                         <td class="px-6 py-4 font-medium  whitespace-nowrap dark:text-white uppercase text-left">
-                            {{ $item->consumo_promedio }}
+                            {{ $item->ultima_itv}}
                         </td>
                         <td class="px-6 py-4 font-medium  whitespace-nowrap dark:text-white uppercase text-left">
-                            {{ $item->matriculacion }}
-                        </td>
-                        <td class="px-6 py-4 font-medium  whitespace-nowrap dark:text-white uppercase text-left">
-                            {{ $item->ultima_itv }}
+                           {{ $item->atp}}
                         </td>
                         <td>
                             <di class="flex space-x-0.5 ml-5 text-justify">
@@ -74,14 +68,13 @@
                             </di>
                         </td>
                     </tr>
+                  
                     @endforeach
-
-
                 </tbody>
             </table>
         </div>
         <div class="mt-4">
-            {{ $tractor->links() }}
+            {{ $remolque->links() }}
         </div>
 
 

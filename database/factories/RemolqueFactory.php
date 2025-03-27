@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tractora>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Remolque>
  */
-class TractoraFactory extends Factory
+class RemolqueFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,13 +17,13 @@ class TractoraFactory extends Factory
     public function definition(): array
     {
         return [
-            "matricula" => $this->faker->bothify('####-???'),
+            "matricula" => $this->faker->bothify('?-####-?'),
             "marca" => $this->faker->text(7),
-            "modelo" => $this->faker->text(10),
-            "kilometraje" => $this->faker->randomNumber(6, false),
-            "consumo_promedio" => $this->faker->numerify('##.##'),
+            "numero_chasis" => $this->faker->bothify('??#??????????#####'),
             "matriculacion" => $this->faker->dateTimeThisYear(),
             "ultima_itv" => $this->faker->dateTimeThisYear(now(), null),
+            "atp" => $this->faker->dateTimeThisYear(now(), null),
         ];
     }
 }
+

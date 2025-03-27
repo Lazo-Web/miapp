@@ -20,13 +20,13 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Gestion Vehiculos')" class="grid">
                  <flux:navlist.item icon="truck"  :href="route('tractora.index')" :current="request()->routeIs('tractora')" wire:navigate>{{ __('Tractora') }}</flux:navlist.item>
-                 <flux:navlist.item icon="truck" href="#">Remolques</flux:navlist.item>
+                 <flux:navlist.item icon="truck"  :href="route('remolque.index')" :current="request()->routeIs('remolque')" wire:navigate>{{ __('Remolque') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Gestion Conductores')" class="grid">
-                 <flux:navlist.item icon="user-circle" href="#" current>Conductores</flux:navlist.item>
+                 <flux:navlist.item icon="user-circle" href="">Conductores</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 

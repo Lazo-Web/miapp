@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RemolqueController;
 use App\Http\Controllers\TractoraController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
@@ -21,5 +22,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::resource('tractora', TractoraController::class);
+Route::resource('remolque', RemolqueController::class);
 
 require __DIR__.'/auth.php';
