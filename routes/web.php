@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -21,7 +23,7 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
-Route::resource('tractora', TractoraController::class);
-Route::resource('remolque', RemolqueController::class);
+Route::resource('tractora', TractoraController::class)->middleware(['auth', 'verified']);
+Route::resource('remolque', RemolqueController::class)->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';

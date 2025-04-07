@@ -13,14 +13,14 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Aplicacion')" class="grid">
-                    <flux:navlist.item icon="building-library" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Inicio') }}</flux:navlist.item>
+                    <flux:navlist.item icon="building-library" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate.hover>{{ __('Inicio') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Gestion Vehiculos')" class="grid">
-                 <flux:navlist.item icon="truck"  :href="route('tractora.index')" :current="request()->routeIs('tractora')" wire:navigate>{{ __('Tractora') }}</flux:navlist.item>
-                 <flux:navlist.item icon="truck"  :href="route('remolque.index')" :current="request()->routeIs('remolque')" wire:navigate>{{ __('Remolque') }}</flux:navlist.item>
+                 <flux:navlist.item icon="truck"  :href="route('tractora.index')" :current="request()->routeIs('tractora')" wire:navigate.hover>{{ __('Tractora') }}</flux:navlist.item>
+                 <flux:navlist.item icon="truck"  :href="route('remolque.index')" :current="request()->routeIs('remolque')" wire:navigate.hover>{{ __('Remolque') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 

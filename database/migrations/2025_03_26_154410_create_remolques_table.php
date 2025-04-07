@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('remolques', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tractoras_id')->constrained()->onUpdate('cascade');
             $table->string('matricula')->unique();
             $table->string('marca')->nullable();
-            $table->string('numero_chasis')->nullable();
+            $table->string('numero_chasis')->nullable()->unique();
             $table->date('matriculacion')->nullable();
             $table->date('ultima_itv')->nullable();
             $table->date('atp')->nullable();

@@ -36,7 +36,7 @@ class TractoraController extends Controller
 
         ]);
         Tractora::create($data);
-        return view('equipos.tractora');
+        return view('equipos.index');
     }
 
     /**

@@ -10,9 +10,15 @@ class Remolque extends Model
 
     protected $fillable = [
         'matricula', 
+        'tractoras_id',
         'marca', 
         'numero_chasis', 
         'matriculacion',
         'ultima_itv', 
         'atp'];
+
+        public function tractora()
+        {
+            return $this->hasOne(Tractora::class, 'tractoras_id');
+        }
 }
