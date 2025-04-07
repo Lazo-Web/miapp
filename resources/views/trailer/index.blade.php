@@ -79,7 +79,7 @@
         <div class="mt-4">
             {{ $remolque->links() }}
         </div>
-
+ {{-- este es el modal que gestiona las entradas --}}
         <div class="max-h-screen overflow-y-auto ">
 
             <flux:modal :dismissible="false" name="crear-remolque" class="w-full max-w-2xl">
